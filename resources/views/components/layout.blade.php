@@ -5,7 +5,7 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <meta http-equiv="X-UA-Compatible" content="ie=edge">
-    <title>Aplikasi Saya</title>
+    <title>Resep Masakan</title>
     @vite(['resources/css/app.css', 'resources/js/app.js'])
 </head>
 
@@ -14,7 +14,7 @@
         <div class="max-w-7xl flex flex-wrap items-center justify-between mx-auto p-4">
             <a href="/" class="flex items-center space-x-3 rtl:space-x-reverse">
                 {{-- <img src="" class="h-7" alt="Img Logo" /> --}}
-                <span class="self-center text-xl text-heading font-semibold whitespace-nowrap">Aplikasi Saya</span>
+                <span class="self-center text-xl text-heading font-semibold whitespace-nowrap">Resep Masakan</span>
             </a>
             <button data-collapse-toggle="navbar-default" type="button"
                 class="inline-flex items-center p-2 w-10 h-10 justify-center text-sm text-body rounded-base md:hidden hover:bg-neutral-secondary-soft hover:text-heading focus:outline-none focus:ring-2 focus:ring-neutral-tertiary"
@@ -36,9 +36,9 @@
                     </li>
 
                     <li>
-                        <a href=""
-                            class="block py-2 px-3 rounded md:p-0 {{ request()->routeIs('products.*') ? 'text-brand' : 'text-heading hover:text-brand' }}">
-                            Product
+                        <a href="{{ route('resep.index') }}"
+                            class="block py-2 px-3 rounded md:p-0 {{ request()->routeIs('resep.*') ? 'text-brand' : 'text-heading hover:text-brand' }}">
+                            Resep
                         </a>
                     </li>
                 </ul>

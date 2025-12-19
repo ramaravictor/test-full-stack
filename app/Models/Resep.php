@@ -21,7 +21,7 @@ class Resep extends Model
         return $this->belongsTo(Category::class);
     }
 
-    public function bahan()
+    public function bahans()
     {
         return $this->belongsToMany(Bahan::class, 'bahan_resep', 'resep_id', 'bahan_id');
     }
